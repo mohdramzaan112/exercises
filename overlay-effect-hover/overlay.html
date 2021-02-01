@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images overlay</title>
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            overflow: hidden;
+            font-size: 20px;
+            white-space: nowrap;
+            transform: translate(-50%, -50%);
+        }
+        .overlay {
+            position: absolute;
+            bottom: 50%;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+            background-color: red;
+            transition: .5s ease;
+        }
+        .container:hover .overlay {
+            height: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img_avatar.png" alt="avatar" class="image">
+        <div class="overlay">
+            <div class="text">Hello World</div> 
+        </div>
+    </div>
+</body>
+</html>
